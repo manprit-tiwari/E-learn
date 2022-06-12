@@ -4,7 +4,7 @@
             <ul class="secondary_nav_ul">
                 <!--Link 1-->
                 <li class="secondary_dropDown_links">
-                    <a href="javascript: void(0)" data-dropdown="one" mat-dialog-close>Home</a>
+                    <a routerLink="home" data-dropdown="one" mat-dialog-close>Home</a>
                 </li>
                 <!--link 2-->
                 <li class="secondary_dropDown_links">
@@ -13,9 +13,9 @@
                     </a>
 
                     <div class="dropDownContent " id="two" *ngIf="two">
-                        <a href="javascript: void(0)" class="dropDownContent_links" mat-dialog-close>Syllabus</a>
-                        <a href="javascript: void(0)" class="dropDownContent_links" mat-dialog-close>Library</a>
-                        <a href="javascript: void(0)" class="dropDownContent_links" mat-dialog-close>Exercise</a>
+                        <a routerLink="/ClassRoom/Syllabus" class="dropDownContent_links" mat-dialog-close>Syllabus</a>
+                        <a routerLink="/ClassRoom/Library" class="dropDownContent_links" mat-dialog-close>Library</a>
+                        <a  class="dropDownContent_links" mat-dialog-close>Exercise</a>
                     </div>
                 </li>
                 <!--link 3-->
@@ -31,7 +31,7 @@
                     </div>
                 </li>
                 <li class="secondary_dropDown_links">
-                    <a href="#" data-dropdown="one" mat-dialog-close>About Us</a>
+                    <a routerLink="About-us" data-dropdown="one" mat-dialog-close>About Us</a>
                 </li>
             </ul>
             <div class="login_container">
