@@ -1,0 +1,77 @@
+header .intro {
+    text-align: center;
+    padding: 0.4rem;
+}
+
+header .intro_head {
+    font-size: 64px;
+    font-weight: 700;
+    color: white;
+}
+
+header .intro_text {
+    font-weight: 600;
+    color: white;
+}
+
+header .intro .getStarted .learn,
+header .intro .getStarted .free {
+    border-radius: 100px;
+    padding: 0.6rem 1.7rem;
+    text-align: center;
+    vertical-align: middle;
+    transition: 0.3s ease;
+}
+
+header .intro .getStarted .free {
+    margin-right: 1rem;
+    background-color: white;
+    color: #ff3d54;
+}
+
+header .intro .getStarted .learn {
+    color: white;
+    background: transparent;
+    border: 1px solid white;
+}
+
+header .intro .getStarted .learn:hover,
+header .intro .getStarted .learn:focus {
+    background: white;
+    color: #ff3d54;
+}
+
+header {
+    width: 100%;
+    background: url(../images/bg-pattern-intro-desktop.svg) no-repeat, linear-gradient(to bottom right, #ff8f70, #ff3d54);
+    background-position: 25% 50%;
+    padding: 13rem 0 7rem 0;
+    border-radius: 0 0 0 100px;
+}
+
+.free,
+.getStarted {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+header .intro .getStarted .free:hover {
+    background: rgba(255, 255, 255, 0.4);
+    color: white;
+}
+
+main {
+    margin-top: 3rem;
+}
+
+@media screen and (max-width: 800px) {
+    header {
+        background: url(../images/bg-pattern-intro-mobile.svg) no-repeat, linear-gradient(to bottom right, #ff8f70, #ff3d54);
+        background-position: 35% 40%;
+    }
+
+}
