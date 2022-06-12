@@ -8,6 +8,11 @@
     flex-flow: row wrap;
     gap: 20px;
 }
+@media (max-width: 450px){
+    .container{
+        justify-content: center;
+    }
+}
 .card {
     margin: 10px;
     background-color: #fff;
