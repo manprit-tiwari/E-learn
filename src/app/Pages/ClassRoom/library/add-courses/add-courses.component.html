@@ -1,0 +1,30 @@
+<div class="header-Spacing"></div>
+
+<div class="form-container">
+    <h1 class="text-center" style="margin-bottom: 2rem;">Add Courses</h1>
+    <form class="margin-top" [formGroup]="CourseUploadForm" (ngSubmit)="UploadCourse()">
+        <div class="row">
+            <!-- <mat-form-field>
+            <input type="text" matInput formControlName="CourseId" placeholder="Course Id">
+          </mat-form-field> -->
+            <mat-form-field>
+                <input type="text" matInput formControlName="CourseName" placeholder="Course Name">
+            </mat-form-field>
+            <mat-form-field>
+                <input type="text" matInput formControlName="CourseURL" placeholder="URL Link">
+            </mat-form-field>
+            <mat-form-field>
+                <input type="text" matInput formControlName="CourseDiscription" placeholder="Course Discription">
+            </mat-form-field>
+            <mat-form-field>
+                <input type="number" matInput formControlName="Year" placeholder="Year">
+            </mat-form-field>
+            <mat-form-field>
+                <input type="number" matInput formControlName="Semester" placeholder="Semester">
+            </mat-form-field>
+            <div style="width: 100%;" class="margin-top button-container">
+                <button type="submit" class="button-center" mat-raised-button mat-dialog-close>Save</button>
+            </div>
+        </div>
+    </form>
+</div>

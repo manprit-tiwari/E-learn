@@ -1,0 +1,73 @@
+<header>
+    <section class="links row ">
+        <span class="logo" routerLink="">E-learn</span>
+        <!--For Desktop-->
+        <nav class="primary_nav_container">
+            <ul class="primary_nav_ul">
+                <!--Link 1-->
+                <li class="primary_dropDown_links">
+                    <a routerLink="home">Home</a>
+                </li>
+                <!--link 2-->
+                <li class="primary_dropDown_links">
+                    <a [mat-menu-trigger-for]="ClassRoom">Class Room</a>
+                    <!-- <span class="dropDown_img"><img src="../../../../assets/images/icon-arrow-light.svg"
+                            alt="icon-arrow-light"></span> -->
+                    <!-- <div class="dropDownContent">
+                        <a class="dropDownContent_links" routerLink="ClassRoom/Syllabus">Syllabus</a>
+                        <a class="dropDownContent_links" routerLink="ClassRoom/Library">Library</a>
+                        <a class="dropDownContent_links">Exercise</a>
+                    </div> -->
+                </li>
+                <!--link 3-->
+                <li class="primary_dropDown_links">
+                    <a >Feedback</a>
+                    <!-- <span class="dropDown_img"><img src="../../../../assets/images/icon-arrow-light.svg"
+                            alt="icon-arrow-light"></span>
+                    <div class="dropDownContent">
+                        <a class="dropDownContent_links">Problems</a>
+                        <a class="dropDownContent_links">Suggestion</a>
+                        <a class="dropDownContent_links">New Courses</a>
+                    </div> -->
+                </li>
+                <li class="primary_dropDown_links">
+                    <a routerLink="About-us">About Us</a>
+                </li>
+            </ul>
+            <!---Login button and signup button-->
+            <ng-container *ngIf="user$ | async as user; else loginButton" class="login_container">
+                <a [mat-menu-trigger-for]="userMenu" class="signup">
+                  <img class="profile-image-toolbar" [width]="30" [height]="30" [src]="user.photoURL || 'assets/images/Profile-placeholder.png'">
+                  {{user.displayName}}
+                  <mat-icon>expand_more</mat-icon>
+                </a>
+              </ng-container>
+              <ng-template #loginButton>
+                <a mat-button routerLink="login" class="signup">
+                  <mat-icon>login</mat-icon>
+                  Login
+                </a>
+              </ng-template>
+              <!-- <div class="login_container">
+                <a class="login">Login</a>
+                <a  >Sign Up</a>
+            </div> -->
+        </nav>
+        <!--Hamburger-->
+        <span class="hamburger" (click)="openDialog()" data-hamburger=""><img
+                src="../../../../assets/images/icon-hamburger.svg" alt="icon-hamburger"></span>
+        <!--Close-->
+        <span *ngIf="MobileMenu" class="close" data-close=""><img src="../../../../assets/images/icon-close.svg"
+                alt="icon-close"></span>
+    </section>
+</header>
+<mat-menu #userMenu="matMenu">
+    <button mat-menu-item (click)="logout()">
+        Log Out
+    </button>
+    <button mat-menu-item routerLink="/profile">Profile</button>
+</mat-menu>
+<mat-menu #ClassRoom="matMenu">
+    <button mat-menu-item routerLink="/ClassRoom/Syllabus">Syllabus</button>
+    <button mat-menu-item routerLink="/ClassRoom/Library">Library</button>
+</mat-menu>

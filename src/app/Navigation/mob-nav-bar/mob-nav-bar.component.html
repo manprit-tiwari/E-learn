@@ -1,0 +1,43 @@
+<header>
+    <section class="links row">
+        <nav class="secondary_nav_container row" data-mobile-nav="">
+            <ul class="secondary_nav_ul">
+                <!--Link 1-->
+                <li class="secondary_dropDown_links">
+                    <a href="javascript: void(0)" data-dropdown="one" mat-dialog-close>Home</a>
+                </li>
+                <!--link 2-->
+                <li class="secondary_dropDown_links">
+                    <a href="javascript: void(0)" data-dropdown="two" (click)="Two()">Class Room
+                        <span class="dropDown_img"><img src="../../../../assets/images/icon-arrow-dark.svg" alt="icon-arrow-dark"></span>
+                    </a>
+
+                    <div class="dropDownContent " id="two" *ngIf="two">
+                        <a href="javascript: void(0)" class="dropDownContent_links" mat-dialog-close>Syllabus</a>
+                        <a href="javascript: void(0)" class="dropDownContent_links" mat-dialog-close>Library</a>
+                        <a href="javascript: void(0)" class="dropDownContent_links" mat-dialog-close>Exercise</a>
+                    </div>
+                </li>
+                <!--link 3-->
+                <li class="secondary_dropDown_links">
+                    <a href="javascript: void(0)" data-dropdown="three" (click)="Three()">Feedback
+                        <span class="dropDown_img"><img src="../../../../assets/images/icon-arrow-dark.svg" alt="icon-arrow-dark"></span>
+                    </a>
+
+                    <div class="dropDownContent" id="three" *ngIf="three">
+                        <a href="javascript: void(0)" class="dropDownContent_links" mat-dialog-close>Problems</a>
+                        <a href="javascript: void(0)" class="dropDownContent_links" mat-dialog-close>Suggestion</a>
+                        <a href="javascript: void(0)" class="dropDownContent_links" mat-dialog-close>New Courses</a>
+                    </div>
+                </li>
+                <li class="secondary_dropDown_links">
+                    <a href="#" data-dropdown="one" mat-dialog-close>About Us</a>
+                </li>
+            </ul>
+            <div class="login_container">
+                <a href="javascript: void(0)" class="login" mat-dialog-close>Login</a>
+                <a href="javascript: void(0)" class="signup" mat-dialog-close>Sign Up</a>
+            </div>
+        </nav>
+    </section>
+</header>

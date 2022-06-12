@@ -1,1 +1,69 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+html,
+body {
+    height: 100%;
+}
+body {
+    min-height: 100vh;
+    font-size: 16px;
+    font-family: "Overpass", sans-serif;
+    margin: 0;
+    /* background-color: aqua; */
+    color: #4b5862;
+    overflow-x: hidden;
+}
+
+h1,
+h2 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.row {
+    width: 90%;
+    margin: 0 auto;
+}
+.heading {
+  color: #1f3f5b;
+  margin: 0 auto;
+  width: 90%;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 36px;
+}
+main {
+  padding: 2rem 0 4rem 0;
+}
+
+.mat-tab-body-content{
+    display: flex;
+    justify-content: center;
+   
+  }
+  .mat-tab-label, .mat-tab-link{
+    font-family: "Overpass",sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .mat-tab-group,.mat-raised-button {
+    font-family: "Overpass", sans-serif;
+  }
+  mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
+    background-color: #ff3d54 !important;
+  }
+  .mat-raised-button{
+    background-color: #ff7768;
+    color: #fff;
+  }
+  .mat-progress-bar-fill::after {
+    background-color: #ff4757 !important;
+}

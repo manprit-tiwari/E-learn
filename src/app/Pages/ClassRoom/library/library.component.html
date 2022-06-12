@@ -1,0 +1,41 @@
+<div *ngIf="isRefreshign"  class="progress bar">
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+</div>
+
+<div class="header-Spacing"></div>
+<button mat-raised-button *ngIf="Admin" (click)="openDialog()">Add Courses</button>
+<button mat-raised-button *ngIf="Admin" (click)="refreshCourse()">Refresh Courses</button>
+
+<div class="container">
+    <div *ngIf="!isRefreshign" class="container">
+      <div class="card" *ngFor="let Course of allCourses">
+        <div class="card-header">
+            <iframe width="100%" height="100%" [src]="Course.CourseURL | safe" title="YouTube video player"
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+        <div class="card-body">
+            <div class="title">
+                <h3>{{Course.CourseName}}</h3>
+                <button mat-icon-button [matMenuTriggerFor]="menu" class="MoreButton">
+                    <mat-icon>more_vert</mat-icon>
+                  </button>
+
+            </div>
+            <div class="courseFor">
+                <p style="align-items: flex-start;">Year: {{Course.Year}}</p>
+                <p style="align-items: flex-end;">Semester: {{Course.Semester}}</p>
+            </div>
+        </div>
+        <div class="more-button">
+            
+        </div>
+      <!-- <button mat-raised-button type="submit" (click)="DeleteCourse(Course.id)">Delete</button> -->
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="DeleteCourse(Course.id)">Delete</button>
+      </mat-menu>
+    </div>
+    </div>
+
+  </div>
+  

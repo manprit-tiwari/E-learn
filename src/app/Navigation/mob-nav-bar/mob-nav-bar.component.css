@@ -1,0 +1,69 @@
+.secondary_nav_container .login_container, .secondary_dropDown_links .dropDownContent, .secondary_dropDown_links > a, .secondary_dropDown_links{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+}
+header .secondary_nav_container {
+    display: block;
+
+    font-size: 16px;
+    transition: 0.3s ease;
+  }
+  header .secondary_nav_container .secondary_nav_ul {
+    padding: 0rem 0rem 1rem;
+    border-bottom: 1px solid #c8c8cb;
+  }
+  header .secondary_nav_container .secondary_nav_ul .secondary_dropDown_links {
+    flex-flow: column;
+  }
+  header .secondary_nav_container .secondary_nav_ul .secondary_dropDown_links span {
+    transition: 0.5s ease;
+  }
+  header .secondary_nav_container .secondary_nav_ul .secondary_dropDown_links > a {
+    margin-bottom: 1rem;
+    color: #25252d;
+    font-size: 16px;
+  
+  }
+  header .secondary_nav_container .secondary_nav_ul .secondary_dropDown_links > a .dropDown_img {
+    margin-left: 0.5rem;
+  }
+  header .secondary_nav_container .secondary_nav_ul .secondary_dropDown_links .dropDownContent {
+    flex-flow: column;
+    display: block;
+    margin-bottom: 1rem;
+    width: 100%;
+    border-radius: 5px;
+    background: #f1f1f1;
+    padding: 1.5rem;
+  }
+  header .secondary_nav_container .secondary_nav_ul .secondary_dropDown_links .dropDownContent > a {
+    font-weight: 600;
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+  }
+  header .secondary_nav_container .secondary_nav_ul .secondary_dropDown_links .dropDownContent > a > a:hover {
+    color: #25252d;
+    font-weight: 700;
+  }
+  header .secondary_nav_container .secondary_nav_ul .secondary_dropDown_links .dropDownContent a + a {
+    margin-top: 1rem;
+  }
+  header .secondary_nav_container .login_container {
+    width: 100%;
+    flex-flow: column;
+  }
+  header .secondary_nav_container .login_container .login {
+    color: #25252d;
+    margin: 2rem 0 1.5rem 0;
+    font-size: 18px;
+  }
+  header .secondary_nav_container .login_container .signup {
+    font-size: 18px;
+    border-radius: 100px;
+    background: linear-gradient(to right, #ff8f70, #ff3d54);
+    padding: 0.7rem 2.7rem;
+    color: white;
+  }

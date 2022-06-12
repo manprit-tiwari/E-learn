@@ -1,0 +1,87 @@
+footer,
+footer .footerContainer {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0 100px 0 0;
+    background: #25252d;
+    color: #c8c8cb;
+    padding: 5rem 0 3rem 0;
+}
+
+footer>span,
+footer .footerContainer>span,
+footer>div,
+footer .footerContainer>div {
+    width: 100%;
+}
+footer>span {
+    font-weight: 700;
+    font-size: 45px;
+    color: white;
+  }
+
+footer .footer_logo {
+    margin-bottom: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .footerContainer {
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+footer .footerContainer .footerHead {
+    color: white;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+footer .footerContainer .footerLinks {
+    font-weight: 500;
+}
+
+footer .footerContainer .footerLinks:hover,
+footer .footerContainer .footerLinks:focus {
+    text-decoration: underline;
+}
+
+footer .footerContainer .footerLinks+.footerLinks,
+footer .footerContainer .footerContainer .footerLinks+.footerLinks {
+    margin-top: 0.5rem;
+}
+
+@media screen and (min-width: 768px) {
+
+    footer,
+    footer .footerContainer {
+        flex-flow: row;
+        align-items: flex-start;
+        padding: 3rem 0 2rem 0;
+    }
+
+    footer>span,
+    footer .footerContainer>span,
+    footer>div,
+    footer .footerContainer>div {
+        flex: 1;
+    }
+
+    footer .footerContainer {
+        flex-flow: column;
+        justify-content: flex-start;
+        padding: 0rem;
+    }
+
+    footer .footerContainer .footerHead {
+        margin-bottom: 2.3rem;
+    }
+
+    footer .footerContainer .footerLinks+.footerLinks,
+    footer .footerContainer .footerContainer .footerLinks+.footerLinks {
+        margin-top: 1rem;
+    }
+}

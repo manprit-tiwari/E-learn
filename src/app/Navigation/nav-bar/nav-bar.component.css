@@ -1,0 +1,142 @@
+.signup {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+  }
+.signup {
+    border-radius: 100px;
+    background: white;
+    padding: 0.6rem 1.7rem;
+    color: #ff3d54;
+    text-align: center;
+    vertical-align: middle;
+    transition: 0.3s ease;
+    cursor: pointer;
+  }
+.signup:hover {
+    background: rgba(255, 255, 255, 0.4);
+    color: white;
+  }
+  header .links {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6rem;
+    cursor: pointer;
+    width: 80%;
+  }
+  header .links .logo {
+    margin-right: 2.5rem;
+    font-weight: 700;
+    font-size: 45px;
+    color: white;
+  }
+  header .links .primary_nav_container {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    flex: 2;
+  }
+  header .links .primary_nav_container .primary_nav_ul {
+    display: flex;
+    flex-flow: row;
+  }
+  header .links .primary_nav_container .primary_nav_ul .primary_dropDown_links {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 2rem;
+    position: relative;
+  }
+  header .links .primary_nav_container .primary_nav_ul .primary_dropDown_links span {
+    position: relative;
+    transition: 0.5s ease;
+  }
+  header .links .primary_nav_container .primary_nav_ul .primary_dropDown_links > a {
+    color: white;
+    margin-right: 0.4rem;
+    transition: 0.3s ease;
+  }
+  header .links .primary_nav_container .primary_nav_ul .primary_dropDown_links > a:hover {
+    text-decoration: underline;
+  }
+  header .links .primary_nav_container .primary_nav_ul .primary_dropDown_links .dropDownContent {
+    position: absolute;
+    display: none;
+    flex-flow: column;
+    justify-content: center;
+    align-items: flex-start;
+    top: 170%;
+    left: 0;
+    background: white;
+    padding: 1.2rem;
+    border-radius: 5px;
+    width: max-content;
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.25);
+  }
+  header .links .primary_nav_container .primary_nav_ul .primary_dropDown_links .dropDownContent > a {
+    font-size: 15px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 0.5rem;
+    transition: 0.3s ease;
+    font-weight: 500;
+  }
+  header .links .primary_nav_container .primary_nav_ul .primary_dropDown_links .dropDownContent > a:hover {
+    color: #25252d;
+    font-weight: 700;
+  }
+  header .links .primary_nav_container .primary_nav_ul .primary_dropDown_links:hover .dropDownContent, header .links .primary_nav_container .primary_nav_ul .primary_dropDown_links:focus-within .dropDownContent {
+    display: flex;
+  }
+  header .links .primary_nav_container .primary_nav_ul .primary_dropDown_links:hover span, header .links .primary_nav_container .primary_nav_ul .primary_dropDown_links:focus-within span {
+    transform: rotate(180deg);
+  }
+.login_container {
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row;
+  }
+.login {
+    background: transparent;
+    color: white;
+    font-weight: 600;
+    margin-right: 1rem;
+  } 
+  header .links  .hamburger {
+      display: none;
+      margin-left: auto;
+  }
+  
+  header{
+      width: 100%;
+      padding: 4rem 0;
+      
+  }
+
+  @media (max-width: 800px) {
+    header .links .hamburger{
+      display: block;
+    }
+    header .links{
+      width: 85%;
+    }
+    header .links .primary_nav_container{
+      display: none;
+    }
+
+  }
+  .profile-image-toolbar{
+    border-radius: 100%;
+    margin-right: 8px;
+  }
+  .signup:hover img.profile-image-toolbar{
+    opacity: 0.5;
+    transition: all 0.3s ease-in-out;
+  }

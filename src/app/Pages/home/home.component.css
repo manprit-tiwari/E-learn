@@ -1,0 +1,62 @@
+@import '../../../assets/style/header.css';
+.section-one{
+    display: flex;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.content-container{
+    width: min(500px, 90%);
+    text-align: left;
+    margin: auto;
+}
+.image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 45%;
+}
+.image > img{
+    width: 500px;
+    height: 330px;
+}
+.content-title{
+    font-size: 24px;
+    color: #1f3f5b;
+    font-weight: 700;
+    width: 100%;
+}
+.content-main{
+    font-size: 16px;
+    font-weight: 500;
+    margin: 1rem 0 2rem 0;
+}
+#first .content, #second .image{
+    order: 1;
+}
+#first .image, #second .content{
+    order: 2;
+}
+@media screen and (max-width: 400px) {
+    .section-one{
+        flex-direction: column;
+    }
+    #first .image, #second .image{
+        order: 1;  
+        margin: 1rem 0;      
+    }
+    .image > img{
+        width: 100vw;
+        height: 100%;
+    }
+    #first .content, #second .content{
+        order: 2;
+        
+    }
+    .content-container{
+        text-align: center;
+    }
+    
+}
