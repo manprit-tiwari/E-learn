@@ -60,10 +60,48 @@ header .secondary_nav_container {
     margin: 2rem 0 1.5rem 0;
     font-size: 18px;
   }
-  header .secondary_nav_container .login_container .signup {
+  /* header .secondary_nav_container .login_container .signup {
     font-size: 18px;
     border-radius: 100px;
     background: linear-gradient(to right, #ff8f70, #ff3d54);
     padding: 0.7rem 2.7rem;
     color: white;
+  } */
+  .login_container {
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row;
+
+  }
+  .signup {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+  }
+.signup {
+    font-size: 18px;
+    border-radius: 100px;
+    background: #ff3d54;
+    padding: 0.7rem 2.7rem;
+    color: #ffffff;
+    text-align: center;
+    vertical-align: middle;
+    transition: 0.3s ease;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+.signup:active {
+    background: rgba(255, 61, 84, 0.4);
+    color: white;
+  }
+ .signup:active img.profile-image-toolbar{
+    opacity: 0.5;
+    transition: all 0.3s ease-in-out;
+  }
+  .profile-image-toolbar{
+    border-radius: 100%;
+    margin-right: 8px;
   }

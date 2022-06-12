@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthenticationService } from 'src/app/services/authentication.service';
+import { UsersService } from 'src/app/services/users.service';
 
 @Component({
   selector: 'app-mob-nav-bar',
@@ -9,6 +12,8 @@ export class MobNavBarComponent implements OnInit {
 
   two = false;
   three = false;
+  user$ = this.userService.currentUserProfile$;
+
 
   Two() {
     if (this.two == false) {
@@ -33,9 +38,18 @@ export class MobNavBarComponent implements OnInit {
     }
   }
 
-  constructor() { }
+  constructor(
+    private authService: AuthenticationService,
+    private userService: UsersService,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
+  }
+  logout() {
+    this.authService.logout().subscribe(() => {
+      this.router.navigate(['']);
+    });
   }
 
 }

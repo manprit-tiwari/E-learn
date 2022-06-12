@@ -9,19 +9,21 @@
                 <!--link 2-->
                 <li class="secondary_dropDown_links">
                     <a href="javascript: void(0)" data-dropdown="two" (click)="Two()">Class Room
-                        <span class="dropDown_img"><img src="../../../../assets/images/icon-arrow-dark.svg" alt="icon-arrow-dark"></span>
+                        <span class="dropDown_img"><img src="../../../../assets/images/icon-arrow-dark.svg"
+                                alt="icon-arrow-dark"></span>
                     </a>
 
                     <div class="dropDownContent " id="two" *ngIf="two">
                         <a routerLink="/ClassRoom/Syllabus" class="dropDownContent_links" mat-dialog-close>Syllabus</a>
                         <a routerLink="/ClassRoom/Library" class="dropDownContent_links" mat-dialog-close>Library</a>
-                        <a  class="dropDownContent_links" mat-dialog-close>Exercise</a>
+                        <a class="dropDownContent_links" mat-dialog-close>Exercise</a>
                     </div>
                 </li>
                 <!--link 3-->
                 <li class="secondary_dropDown_links">
                     <a href="javascript: void(0)" data-dropdown="three" (click)="Three()">Feedback
-                        <span class="dropDown_img"><img src="../../../../assets/images/icon-arrow-dark.svg" alt="icon-arrow-dark"></span>
+                        <span class="dropDown_img"><img src="../../../../assets/images/icon-arrow-dark.svg"
+                                alt="icon-arrow-dark"></span>
                     </a>
 
                     <div class="dropDownContent" id="three" *ngIf="three">
@@ -34,10 +36,28 @@
                     <a routerLink="About-us" data-dropdown="one" mat-dialog-close>About Us</a>
                 </li>
             </ul>
-            <div class="login_container">
-                <a routerLink="login" class="login" mat-dialog-close>Login</a>
-                <a routerLink="signUp" class="signup" mat-dialog-close>Sign Up</a>
-            </div>
+            <ng-container *ngIf="user$ | async as user; else loginButton" class="login_container">
+                <a class="signup" style="
+                box-shadow: 3px 3px 10px rgba(0,0,0,0.4);
+                background: #ffffff;
+                color: #ff3d54;
+            " routerLink="profile" mat-dialog-close>
+                    <img class="profile-image-toolbar" [width]="30" [height]="30"
+                        [src]="user.photoURL || 'assets/images/Profile-placeholder.png'">
+                    {{user.displayName}}
+                </a>
+            </ng-container>
+            <ng-container *ngIf="user$ | async as user" class="login_container">
+                <a class="signup" (click)="logout()" mat-dialog-close>
+                    Log Out
+                </a>
+            </ng-container>
+            <ng-template #loginButton>
+                <a mat-button routerLink="login" class="signup" mat-dialog-close>
+                    <mat-icon>login</mat-icon>
+                    Login
+                </a>
+            </ng-template>
         </nav>
     </section>
 </header>

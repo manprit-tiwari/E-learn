@@ -6,6 +6,11 @@
     padding: 48px;
     border-radius: 16px;
 }
+@media (max-width: 450px){
+    .form-container{
+        max-width: 255px;
+    }
+}
 .form-container mat-form-field{
     width: 100%;
 }
